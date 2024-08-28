@@ -14,22 +14,30 @@ All codes are written in Matlab.
 
 If we denote the filtered signal by $s(t) = w^t \mathbf{x}(t)$, the filters are obtained as:
 
-Method 1: $\mathbf{w}_* = \arg \min_{\mathbf{w} } \frac{\sum_t (s(t+T) - s(t))^2}{\sum_t (s(t))^2}$
+Method 1: 
 
-Method 2: $\mathbf{w}_* = \arg \max_{\mathbf{w}} \frac{\sum_t s(t+T) \cdot s(t)}{\sum_t (s(t))^2}$
+![equation](https://latex.codecogs.com/svg.image?%5Cmathbf%7Bw%7D_*=%5Carg%5Cmin_%7B%5Cmathbf%7Bw%7D%7D%5Cfrac%7B%5Csum_t(s(t&plus;T)-s(t))%5E2%7D%7B%5Csum_t(s(t))%5E2%7D)
 
-Method 3 (canonical correlation analysis): $(\mathbf{w}_*, \mathbf{w}_y_*) = \arg \max_{\mathbf{w}, \mathbf{w}_y} \frac{\mathbf{w}^T C_{x;y} \mathbf{w}_y}{\sqrt{\mathbf{w}^T C_{x}(0)\mathbf{w} \cdot \mathbf{w}_y^T C_{y}(0)\mathbf{w}_y}} $
+Method 2: 
 
-with $y(t) = ( \sin(2\pi F t)~ \cos(2\pi F t)~ \sin(2\pi 2F t)~\ldots$ $\sin(2\pi N_h F t)~ \cos(2\pi N_h\fpi t))^T$ ($N_h$ being a parameter: the number of harmonic of the reference periodic signal) and $C_{x;y} =\mathbb{E}_t\{x(t)y(t)^T\}$. 
+![equation](https://latex.codecogs.com/svg.image?%5Cmathbf%7Bw%7D_*=%5Carg%5Cmax_%7B%5Cmathbf%7Bw%7D%7D%5Cfrac%7B%5Csum_t%20s(t&plus;T)%5Ccdot%20s(t)%7D%7B%5Csum_t(s(t))%5E2%7D)
 
-Method 4 (Spectral Contrast maximization): $ \mathbf{w}_* = \arg \max_{\mathbf{w}} \frac{ \mathbb{E}_{f \in\nu}\{|S(f)|^2\} }{\mathbb{E}_{f \in \mu}\{|S(f)|^2\}}  $
+Method 3 (canonical correlation analysis): 
 
-with the Fourier transform of the filtered signal at frequency $f$: S(f) := \mathcal{F}_f\{s(t)\} = \mathbf{w}^T \mathcal{F}_f\{\mathbf{x}(t)\} = \mathbf{w}^T X(f)
+![equation](https://latex.codecogs.com/svg.image?(%5Cmathbf%7Bw%7D_*,%5Cmathbf%7Bw%7D_y_*)=%5Carg%5Cmax_%7B%5Cmathbf%7Bw%7D,%5Cmathbf%7Bw%7D_y%7D%5Cfrac%7B%5Cmathbf%7Bw%7D%5ET%20C_%7Bx;y%7D%5Cmathbf%7Bw%7D_y%7D%7B%5Csqrt%7B%5Cmathbf%7Bw%7D%5ET%20C_%7Bx%7D(0)%5Cmathbf%7Bw%7D%5Ccdot%5Cmathbf%7Bw%7D_y%5ET%20C_%7By%7D(0)%5Cmathbf%7Bw%7D_y%7D%7D)
+
+with $y(t) = (sin(2\pi F t), cos(2\pi F t), sin(2\pi 2F t), \ldots, sin(2\pi N_h F t), cos(2\pi N_h F t))^T$ ($N_h$ being a parameter: the number of harmonic of the reference periodic signal) and $C_{x;y} =\mathbb{E}_t\[x(t)y(t)^T\]$. 
+
+Method 4 (Spectral Contrast maximization): 
+
+![equation](https://latex.codecogs.com/svg.image?%5Cmathbf%7Bw%7D_*=%5Carg%5Cmax_%7B%5Cmathbf%7Bw%7D%7D%5Cfrac%7B%5Cmathbb%7BE%7D_%7Bf%5Cin%5Cnu%7D%5C%7B%7CS(f)%7C%5E2%5C%7D%7D%7B%5Cmathbb%7BE%7D_%7Bf%5Cin%5Cmu%7D%5C%7B%7CS(f)%7C%5E2%5C%7D%7D)
+
+with the Fourier transform of the filtered signal at frequency $f$: $S(f) := \mathcal{F}_f\[s(t)\] = \mathbf{w}^T \mathcal{F}_f\[\mathbf{x}(t)\] = \mathbf{w}^T X(f)$
 
 
 # Running
 
-An example can be ran using test_piCA.m
+An example can be run using test_piCA.m
 
 The methods are implemented in piCA_compute.m
 
