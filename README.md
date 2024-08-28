@@ -4,7 +4,7 @@ $\pi$CA
 
 Extraction of periodic components from multidimensional recordings
 
-The methods are described in this article (https://link.springer.com/chapter/10.1007/978-3-319-93764-9_48)
+The methods are described in [this article](https://link.springer.com/chapter/10.1007/978-3-319-93764-9_48)
 
 # Description
 
@@ -12,7 +12,7 @@ This repository contains the codes written to extract periodic components from m
 
 All codes are written in Matlab. 
 
-If we denote the filtered signal by $s(t) = w^t \mathbf{x}(t)$, the filters are obtained as:
+If we denote the filtered signal by $\`s(t) = w^t \mathbf{x}(t)\`$, the filters are obtained as:
 
 Method 1: $\mathbf{w}_* = \arg \min_{\mathbf{w} } \frac{\sum_t (s(t+T) - s(t))^2}{\sum_t (s(t))^2}$
 
@@ -37,6 +37,6 @@ The methods are implemented in piCA_compute.m
 
 # Contact
 
-You can contact me at dounia dot mulders at uclouvain.be for any question. :-)
+You can contact me at dounia **dot** mulders **at** uclouvain.be for any question. :-)
 
 
