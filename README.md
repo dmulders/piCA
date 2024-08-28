@@ -12,7 +12,7 @@ This repository contains the codes written to extract periodic components from m
 
 All codes are written in Matlab. 
 
-If we denote the filtered signal by $\`s(t) = w^t \mathbf{x}(t)\`$, the filters are obtained as:
+If we denote the filtered signal by $s(t) = w^t \mathbf{x}(t)$, the filters are obtained as:
 
 Method 1: $\mathbf{w}_* = \arg \min_{\mathbf{w} } \frac{\sum_t (s(t+T) - s(t))^2}{\sum_t (s(t))^2}$
 
