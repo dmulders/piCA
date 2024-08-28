@@ -1,12 +1,10 @@
-Periodic component analysis
-
-$\pi$CA
+# **Periodic component analysis ($\pi$ CA)**
 
 Extraction of periodic components from multidimensional recordings
 
 The methods are described in [this article](https://link.springer.com/chapter/10.1007/978-3-319-93764-9_48)
 
-# Description
+## Description
 
 This repository contains the codes written to extract periodic components from multidimensional recordings using spatial filtering. The period of interest $T = 1/F$ should be known. 
 
@@ -35,7 +33,7 @@ Method 4 (Spectral Contrast maximization):
 with the Fourier transform of the filtered signal at frequency $f$: $S(f) := \mathcal{F}_f\[s(t)\] = \mathbf{w}^T \mathcal{F}_f\[\mathbf{x}(t)\] = \mathbf{w}^T X(f)$
 
 
-# Running
+## Running
 
 An example can be run using test_piCA.m
 
@@ -43,7 +41,7 @@ The methods are implemented in piCA_compute.m
 
 ![Image](https://github.com/user-attachments/assets/15159a7e-aae9-4c8d-b42a-bd3c41326977)
 
-# Contact
+## Contact
 
 You can contact me at dounia **dot** mulders **at** uclouvain.be for any question. :-)
 
